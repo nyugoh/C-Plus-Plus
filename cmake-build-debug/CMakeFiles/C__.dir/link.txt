@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o  -o C__ 

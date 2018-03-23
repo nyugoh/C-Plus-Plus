@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/C__Jo.dir/Strings/C-Strings.cpp.o  -o C__Jo 

@@ -57,38 +57,38 @@ include CMakeFiles/C__.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C__.dir/flags.make
 
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o: CMakeFiles/C__.dir/flags.make
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o: ../Pointers/BubbleSort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/Ripos/Tuts/C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o -c /home/joe/Ripos/Tuts/C++/Pointers/BubbleSort.cpp
+CMakeFiles/C__.dir/NumberConverter/main.cpp.o: CMakeFiles/C__.dir/flags.make
+CMakeFiles/C__.dir/NumberConverter/main.cpp.o: ../NumberConverter/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/Ripos/Tuts/C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C__.dir/NumberConverter/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C__.dir/NumberConverter/main.cpp.o -c /home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp
 
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/Ripos/Tuts/C++/Pointers/BubbleSort.cpp > CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.i
+CMakeFiles/C__.dir/NumberConverter/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C__.dir/NumberConverter/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp > CMakeFiles/C__.dir/NumberConverter/main.cpp.i
 
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/Ripos/Tuts/C++/Pointers/BubbleSort.cpp -o CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.s
+CMakeFiles/C__.dir/NumberConverter/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C__.dir/NumberConverter/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp -o CMakeFiles/C__.dir/NumberConverter/main.cpp.s
 
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.requires:
+CMakeFiles/C__.dir/NumberConverter/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.requires
+.PHONY : CMakeFiles/C__.dir/NumberConverter/main.cpp.o.requires
 
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.provides: CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.requires
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.provides.build
-.PHONY : CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.provides
+CMakeFiles/C__.dir/NumberConverter/main.cpp.o.provides: CMakeFiles/C__.dir/NumberConverter/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.o.provides.build
+.PHONY : CMakeFiles/C__.dir/NumberConverter/main.cpp.o.provides
 
-CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.provides.build: CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o
+CMakeFiles/C__.dir/NumberConverter/main.cpp.o.provides.build: CMakeFiles/C__.dir/NumberConverter/main.cpp.o
 
 
 # Object files for target C__
 C___OBJECTS = \
-"CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o"
+"CMakeFiles/C__.dir/NumberConverter/main.cpp.o"
 
 # External object files for target C__
 C___EXTERNAL_OBJECTS =
 
-C__: CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o
+C__: CMakeFiles/C__.dir/NumberConverter/main.cpp.o
 C__: CMakeFiles/C__.dir/build.make
 C__: CMakeFiles/C__.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joe/Ripos/Tuts/C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable C__"
@@ -99,7 +99,7 @@ CMakeFiles/C__.dir/build: C__
 
 .PHONY : CMakeFiles/C__.dir/build
 
-CMakeFiles/C__.dir/requires: CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o.requires
+CMakeFiles/C__.dir/requires: CMakeFiles/C__.dir/NumberConverter/main.cpp.o.requires
 
 .PHONY : CMakeFiles/C__.dir/requires
 

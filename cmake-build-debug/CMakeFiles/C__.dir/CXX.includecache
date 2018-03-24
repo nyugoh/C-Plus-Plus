@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/joe/Ripos/Tuts/C++/Pointers/BubbleSort.cpp
+/home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp
 iostream
+-
+vector
 -
 

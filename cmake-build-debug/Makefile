@@ -123,32 +123,32 @@ C__/fast:
 	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/build
 .PHONY : C__/fast
 
-Pointers/BubbleSort.o: Pointers/BubbleSort.cpp.o
+NumberConverter/main.o: NumberConverter/main.cpp.o
 
-.PHONY : Pointers/BubbleSort.o
+.PHONY : NumberConverter/main.o
 
 # target to build an object file
-Pointers/BubbleSort.cpp.o:
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o
-.PHONY : Pointers/BubbleSort.cpp.o
+NumberConverter/main.cpp.o:
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.o
+.PHONY : NumberConverter/main.cpp.o
 
-Pointers/BubbleSort.i: Pointers/BubbleSort.cpp.i
+NumberConverter/main.i: NumberConverter/main.cpp.i
 
-.PHONY : Pointers/BubbleSort.i
+.PHONY : NumberConverter/main.i
 
 # target to preprocess a source file
-Pointers/BubbleSort.cpp.i:
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.i
-.PHONY : Pointers/BubbleSort.cpp.i
+NumberConverter/main.cpp.i:
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.i
+.PHONY : NumberConverter/main.cpp.i
 
-Pointers/BubbleSort.s: Pointers/BubbleSort.cpp.s
+NumberConverter/main.s: NumberConverter/main.cpp.s
 
-.PHONY : Pointers/BubbleSort.s
+.PHONY : NumberConverter/main.s
 
 # target to generate assembly for a file
-Pointers/BubbleSort.cpp.s:
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.s
-.PHONY : Pointers/BubbleSort.cpp.s
+NumberConverter/main.cpp.s:
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.s
+.PHONY : NumberConverter/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C__"
-	@echo "... Pointers/BubbleSort.o"
-	@echo "... Pointers/BubbleSort.i"
-	@echo "... Pointers/BubbleSort.s"
+	@echo "... NumberConverter/main.o"
+	@echo "... NumberConverter/main.i"
+	@echo "... NumberConverter/main.s"
 .PHONY : help
 
 

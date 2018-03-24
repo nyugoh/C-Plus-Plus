@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/C__.dir/Pointers/BubbleSort.cpp.o"
+  "CMakeFiles/C__.dir/NumberConverter/main.cpp.o"
   "C__.pdb"
   "C__"
 )

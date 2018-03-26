@@ -3,4 +3,4 @@ project(C__)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(C__ NumberConverter/main.cpp)
+add_executable(C__ Tutorials/Templates/IntegerStack.cpp)

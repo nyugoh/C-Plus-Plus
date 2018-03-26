@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp
+/home/joe/Ripos/Tuts/C++/Tutorials/Templates/IntegerStack.cpp
 iostream
--
-vector
 -
 

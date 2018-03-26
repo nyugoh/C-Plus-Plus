@@ -1,24 +1,50 @@
 #include <iostream>
 #include <vector>
+#include <math.h>
 
 using namespace std;
 
 void welcomeMessage();
 void byeMessage();
 void converter(vector<int>);
+int binaryToDecimal(vector<int>);
 
 int main() {
     vector<int> decimalNumbers;
+    vector<int> binaryNumbers;
     string numbers;
+    int choice;
     welcomeMessage();
-    for(int i=0;i<5;i++)
+    cout << "Let\'s Play \n 1 : Decimal ==> Binary\n 2 : Binary ==> Decimal\n\n Choose 1 or 2 ::" << endl;
+    cin >> choice;
+    cin.clear();
+    if (choice == 1)
     {
-        int a;
         cout << "Enter 5 decimal numbers ::" << endl;
-        cin >> a;
-        decimalNumbers.push_back(a);
+        for(int i=0;i<5;i++)
+        {
+            int a;
+            cin >> a;
+            decimalNumbers.push_back(a);
+        }
+        converter(decimalNumbers);
     }
-    converter(decimalNumbers);
+    else
+    {
+        cout << "Enter a binary number (end it with a decimal i.e 1010.) ::" << endl;
+        getline(cin, numbers, '.');
+        char binary[numbers.size()];
+        char* pEnd;
+        for(int i=0;i<numbers.size();i++)
+        {
+            if(numbers[i] == '0' || numbers[i] == '1')
+            {
+                binary[i] = numbers[i];
+                binaryNumbers.push_back(int(strtol(binary, &pEnd, 10)));
+            }
+        }
+        cout << numbers << " ===> " << binaryToDecimal(binaryNumbers) << endl;
+    }
     byeMessage();
     return 0;
 }
@@ -85,4 +111,20 @@ void converter(vector<int> numbers)
             cout << *rit;
         cout << endl;
     }
+}
+
+int binaryToDecimal(vector<int> binary)
+{
+//    binary = {1,0,1,0};
+    auto rit = binary.rbegin();
+    int index = 0;
+    int decimal = 0;
+    for( ;rit < binary.rend(); rit++)
+    {
+        int base2 = pow(2, index);
+        int current = *rit;
+        decimal += current * base2;
+        index ++;
+    }
+    return decimal;
 }

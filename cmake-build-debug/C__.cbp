@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp">
+		<Unit filename="/home/joe/Ripos/Tuts/C++/Tutorials/Templates/IntegerStack.cpp">
 			<Option target="C__"/>
 		</Unit>
 		<Unit filename="/home/joe/Ripos/Tuts/C++/CMakeLists.txt">

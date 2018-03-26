@@ -123,32 +123,32 @@ C__/fast:
 	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/build
 .PHONY : C__/fast
 
-NumberConverter/main.o: NumberConverter/main.cpp.o
+Tutorials/Templates/IntegerStack.o: Tutorials/Templates/IntegerStack.cpp.o
 
-.PHONY : NumberConverter/main.o
+.PHONY : Tutorials/Templates/IntegerStack.o
 
 # target to build an object file
-NumberConverter/main.cpp.o:
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.o
-.PHONY : NumberConverter/main.cpp.o
+Tutorials/Templates/IntegerStack.cpp.o:
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Tutorials/Templates/IntegerStack.cpp.o
+.PHONY : Tutorials/Templates/IntegerStack.cpp.o
 
-NumberConverter/main.i: NumberConverter/main.cpp.i
+Tutorials/Templates/IntegerStack.i: Tutorials/Templates/IntegerStack.cpp.i
 
-.PHONY : NumberConverter/main.i
+.PHONY : Tutorials/Templates/IntegerStack.i
 
 # target to preprocess a source file
-NumberConverter/main.cpp.i:
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.i
-.PHONY : NumberConverter/main.cpp.i
+Tutorials/Templates/IntegerStack.cpp.i:
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Tutorials/Templates/IntegerStack.cpp.i
+.PHONY : Tutorials/Templates/IntegerStack.cpp.i
 
-NumberConverter/main.s: NumberConverter/main.cpp.s
+Tutorials/Templates/IntegerStack.s: Tutorials/Templates/IntegerStack.cpp.s
 
-.PHONY : NumberConverter/main.s
+.PHONY : Tutorials/Templates/IntegerStack.s
 
 # target to generate assembly for a file
-NumberConverter/main.cpp.s:
-	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/NumberConverter/main.cpp.s
-.PHONY : NumberConverter/main.cpp.s
+Tutorials/Templates/IntegerStack.cpp.s:
+	$(MAKE) -f CMakeFiles/C__.dir/build.make CMakeFiles/C__.dir/Tutorials/Templates/IntegerStack.cpp.s
+.PHONY : Tutorials/Templates/IntegerStack.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C__"
-	@echo "... NumberConverter/main.o"
-	@echo "... NumberConverter/main.i"
-	@echo "... NumberConverter/main.s"
+	@echo "... Tutorials/Templates/IntegerStack.o"
+	@echo "... Tutorials/Templates/IntegerStack.i"
+	@echo "... Tutorials/Templates/IntegerStack.s"
 .PHONY : help
 
 

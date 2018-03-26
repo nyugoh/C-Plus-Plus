@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/joe/Ripos/Tuts/C++/NumberConverter/main.cpp" "/home/joe/Ripos/Tuts/C++/cmake-build-debug/CMakeFiles/C__.dir/NumberConverter/main.cpp.o"
+  "/home/joe/Ripos/Tuts/C++/Tutorials/Templates/IntegerStack.cpp" "/home/joe/Ripos/Tuts/C++/cmake-build-debug/CMakeFiles/C__.dir/Tutorials/Templates/IntegerStack.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

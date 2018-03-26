@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/C__.dir/NumberConverter/main.cpp.o"
+  "CMakeFiles/C__.dir/Tutorials/Templates/IntegerStack.cpp.o"
   "C__.pdb"
   "C__"
 )

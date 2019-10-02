@@ -11,6 +11,8 @@ int* generateRandomInts()
 {
     const int SIZE = 10;
     static int nums[SIZE];
+//    static int nums[SIZE]= {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+//    static int nums[SIZE]= { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     srand(  (unsigned)time(NULL));
 
     for (int i = 0; i < SIZE; ++i)
@@ -19,7 +21,7 @@ int* generateRandomInts()
     return nums;
 }
 
-void swap(int* first, int* second)
+void swap_ints(int* first, int* second)
 {
     cout << "Swapping " << *first << " and " << *second << endl;
     int temp = *first;

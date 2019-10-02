@@ -8,19 +8,20 @@ using namespace std;
 
 void bubble_sort(int* nums)
 {
+    int loops = 0;
     bool continueLooping = true;
-    cout << "Sorting" << endl;
+    cout << "Started sorting" << endl;
     while(continueLooping) {
         continueLooping = false;
         for (int i = 0; i < 10; ++i) {
-            cout << "Round " << i +1 << endl;
             int* current = nums + i;
             int* next = (nums+ (i+1));
             if(*current > *next && (i+1) < 10){
-                swap(current, next);
+                swap_ints(current, next);
                 continueLooping = true;
             }
+            loops++;
         }
     }
-    cout << "Finished sorting" << endl;
+    cout << "Finished sorting in " << loops << " loops." << endl;
 }

@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "joe.h"
+#include "../include/joe.h"
 using namespace std;
 
 

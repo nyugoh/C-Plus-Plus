@@ -2,7 +2,7 @@
 // Created by joe on 9/29/19.
 //
 #include <iostream>
-#include "array_of_template_classes.h"
+#include "../include/array_of_template_classes.h"
 
 int main()
 {

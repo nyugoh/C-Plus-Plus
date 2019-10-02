@@ -1,11 +1,9 @@
-#include <iostream>
-#include "joe.h"
-#include "classes.cpp"
-#include "overloading.cpp"
-#include "template.cpp"
-#include "overloading2.h"
-#include "overloading2.cpp"
-#include "template_classes.cpp"
+#include "include/joe.h"
+#include "OOP/classes.cpp"
+#include "operator-overloading/overloading.cpp"
+#include "templates/template.cpp"
+#include "operator-overloading/overloading2.cpp"
+#include "templates/template_classes.cpp"
 using namespace std;
 
 int main() {

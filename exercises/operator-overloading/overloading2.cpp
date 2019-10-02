@@ -2,7 +2,7 @@
 // Created by joe on 9/28/19.
 //
 
-#include "overloading2.h"
+#include "../include/overloading2.h"
 
 Store::Store(string name, string address, int regNum)
 {

@@ -2,7 +2,7 @@
 // Created by joe on 9/20/19.
 //
 #include <iostream>
-#include "joe.h"
+#include "../include/joe.h"
 using namespace std;
 
 Student::Student(int age, int weight, int height, string name) {

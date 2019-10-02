@@ -11,7 +11,6 @@ void selection_sort(int* nums)
 {
     int sortedListLength = 0;
     int indexOfMin = 0;
-//    int min = 0;
     for (int i = sortedListLength; i < 10; ++i) {
         indexOfMin = findIndexOfMin(sortedListLength, nums, 10);
         swap_ints(nums+sortedListLength, nums+indexOfMin);

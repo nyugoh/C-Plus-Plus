@@ -4,7 +4,7 @@
 */
 #include <iostream>
 #include "tools.cpp"
-#include "bubble-sort/bubble.cpp"
+#include "bubble.cpp"
 
 using namespace std;
 

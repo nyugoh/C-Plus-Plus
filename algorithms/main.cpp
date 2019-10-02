@@ -5,28 +5,16 @@
 #include <iostream>
 #include "tools.cpp"
 #include "bubble.cpp"
+#include "selection_sort.cpp"
 
 using namespace std;
-
-void showList(int*);
 
 int main()
 {
     int* pInts = generateRandomInts();
-
     showList(pInts);
-    bubble_sort(pInts);
+//    bubble_sort(pInts);
+    selection_sort(pInts);
     showList(pInts);
     return 0;
-}
-
-void showList(int* nums)
-{
-    cout << "{ ";
-    for (int i = 0; i < 10; ++i) {
-        cout << *(nums+i) ;
-        if(i != 9)
-            cout << ", " ;
-    }
-    cout << " }" << endl;
 }

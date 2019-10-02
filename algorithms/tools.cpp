@@ -7,6 +7,17 @@
 
 using namespace std;
 
+void showList(int* nums)
+{
+    cout << "{ ";
+    for (int i = 0; i < 10; ++i) {
+        cout << *(nums+i) ;
+        if(i != 9)
+            cout << ", " ;
+    }
+    cout << " }" << endl;
+}
+
 int* generateRandomInts()
 {
     const int SIZE = 10;
@@ -28,4 +39,18 @@ void swap_ints(int* first, int* second)
     *first = *first +  *second;
     *first -= temp;
     *second = temp;
+}
+
+int findIndexOfMin(int startIndex, int* array, int size)
+{
+    cout << "Finding min value starting at ::" << startIndex << endl;
+    int min = *(array + startIndex);
+    int indexOfMin = startIndex;
+    for (int j = startIndex; j < size; ++j)
+        if(*(array+j) < min){
+            min = *(array+j);
+            indexOfMin = j;
+        }
+    cout << "Found min value "<< min << " located at index " << indexOfMin << endl;
+    return indexOfMin;
 }

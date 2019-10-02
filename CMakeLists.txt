@@ -3,4 +3,4 @@ project(C-Plus-Plus)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(C-Plus-Plus exercises/main.cpp)
+add_executable(C-Plus-Plus algorithms/main.cpp)

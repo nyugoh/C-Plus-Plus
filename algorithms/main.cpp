@@ -6,6 +6,7 @@
 #include "tools.cpp"
 #include "bubble.cpp"
 #include "selection_sort.cpp"
+#include "insertion_sort.cpp"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ int main()
     int* pInts = generateRandomInts();
     showList(pInts);
 //    bubble_sort(pInts);
-    selection_sort(pInts);
+//    selection_sort(pInts);
+    insertion_sort(pInts);
     showList(pInts);
     return 0;
 }

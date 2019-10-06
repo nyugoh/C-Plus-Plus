@@ -83,5 +83,8 @@ int main(int argvc, char *argv[])
     cout << "value of end() ::" << *(v2.end()-1) << endl;
     cout << "value of begin() ::" << *v2.begin() << endl;
 
+    v2.clear();
+    cout << "Sized of v2 after clearing " << v2.size() << endl;
+
     return 0;
 }

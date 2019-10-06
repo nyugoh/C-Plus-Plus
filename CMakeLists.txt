@@ -3,4 +3,4 @@ project(C-Plus-Plus)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(C-Plus-Plus exercises/files/files.cpp)
+add_executable(C-Plus-Plus STL/vector.cpp)

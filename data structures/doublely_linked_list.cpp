@@ -57,10 +57,31 @@ void insertFirst(int data){
 }
 
 void insertAt(int data){
+    Node *newNode = new Node();
+    newNode->data = data;
+    if(isEmpty()){
+        last = newNode;
+        newNode->next = NULL;
+        newNode->prev = head;
+        head = newNode;
+    } else {
 
+    }
 }
 
-void insertLast(int data){}
+void insertLast(int data){
+    Node *newNode = new Node();
+    newNode->data = data;
+
+    if(isEmpty()){
+        head = newNode;
+    } else {
+        last->next = newNode;
+    }
+    newNode->prev = last;
+    newNode->next = NULL;
+    last = newNode;
+}
 
 int deleteFirst()
 {
@@ -73,9 +94,14 @@ int deleteFirst()
     tempNode = head;
     data = tempNode->data;
 
-
+    // If list has one item only
+    if(head->next == NULL){
+        // Make last null
+        last = NULL;
+    } else {
+        head = head->next;
+    }
    // Move head forward
-   head = head->next;
    head->prev = NULL;
    return data;
 }
@@ -86,17 +112,50 @@ void deleteLast(){}
 
 void displayForward()
 {
-
+    Node *tempNode = head;
+    cout << "Display forward" << endl;
+    cout << "[ " ;
+    while(tempNode != nullptr){
+        cout << tempNode->data;
+        if(tempNode != last)
+            cout << " -> ";
+        tempNode = tempNode->next;
+    }
+    cout << " ]" << endl;
 }
 
 void displayBackward()
 {
+    Node *tempNode = last;
+    cout << "Display backwards" << endl;
+    cout << "[ ";
+    while(tempNode != nullptr){
+        cout << tempNode->data;
+        if(tempNode != head)
+            cout << " <- ";
+        tempNode = tempNode->prev;
+    }
+    cout << " ]" << endl;
 
+}
+
+void print()
+{
+    displayForward();
+    displayBackward();
 }
 
 int main(int argvc, char *argv[])
 {
-
+    insertFirst(10);
+    insertFirst(12);
+    insertFirst(14);
+    insertFirst(16);
+    insertFirst(18);
+    print();
+    cout << "Delete first :" << deleteFirst() << endl;
+    cout << "Delete first :" << deleteFirst() << endl;
+    print();
 
     return 0;
 }

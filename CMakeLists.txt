@@ -3,4 +3,4 @@ project(C-Plus-Plus)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-add_executable(C-Plus-Plus "data structures/stack.cpp")
+add_executable(C-Plus-Plus "data structures/doublely_linked_list.cpp")

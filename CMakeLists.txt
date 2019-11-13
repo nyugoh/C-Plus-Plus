@@ -7,4 +7,4 @@ include_directories(exercises/data-types)
 include_directories(exercises/include)
 include_directories(STL)
 
-add_executable(C_Plus_Plus exercises/strings/operations.cpp)
+add_executable(C_Plus_Plus hacker-rank/compare_triplets.cpp)

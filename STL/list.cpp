@@ -17,6 +17,12 @@ int main(int argvc, char *argv[])
     l1.sort();
     showList(l1);
 
+    // Remove item at the end and add it to front
+    l1.push_front(l1.pop_back());
+
+    // remove item at the start
+    l1.pop_front();
+
     l1.reverse();
     showList(l1);
 

@@ -4,16 +4,16 @@
 */
 
 #include <iostream>
+using namespace std;
 
 class Node {
 public:
     Node(int x) : data(x), next(nullptr) {}
-
     int data;
     Node *next;
 };
 
-using namespace std;
+
 
 struct LinkList{
     Node *head;
@@ -27,20 +27,24 @@ struct LinkList{
         Node *newNode = new Node(data);
         newNode->next = head;
     }
-
-    void print()
-    {
-
-    }
 };
 
-void traverse(Node *head) {
+void traverseIteration(Node *head)
+{
+    while(head->next != nullptr){
+        cout << head->data << " ->";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+void traverseRecursive(Node *head) {
     cout << head->data << " ";
     if (head->next == nullptr) {
         cout << endl;
         return;
     }
-    traverse(head->next);
+    traverseRecursive(head->next);
 }
 
 void appendNode(Node *current, int data) {
@@ -75,7 +79,7 @@ void deleteNode(Node *head, Node *currentNode) {
     }
 }
 
-bool searchItem(Node *head, int value) {
+Node* searchItem(Node *head, int value) {
     Node *currentNode = head;
     bool isFound = false;
     while (currentNode->next != nullptr) {
@@ -86,7 +90,7 @@ bool searchItem(Node *head, int value) {
             currentNode = currentNode->next;
         }
     }
-    return isFound;
+    return isFound ? currentNode : nullptr;;
 }
 
 bool searchItemRecursively(Node *head, int value) {
@@ -119,6 +123,20 @@ int countItemRecursively(Node *head) {
         return 1 + countItemRecursively(head->next);
 }
 
+void printMiddle(Node * head)
+{
+    Node *slowPtr = head;
+    Node *fastPtr = head;
+    while(1){
+        if(fastPtr->next == nullptr){
+            cout << slowPtr->data << endl;
+            break;
+        }
+        fastPtr = fastPtr->next->next;
+        slowPtr = slowPtr->next;
+    }
+}
+
 int main() {
     Node *first = new Node(10);
     Node *second = new Node(15);
@@ -131,23 +149,25 @@ int main() {
     cout << "isEmpty :: " << isEmpty(first) << endl;
     cout << "isEmpty :: " << isEmpty(third) << endl;
 
-    traverse(first);
+    traverseRecursive(first);
     appendNode(second, 99);
     appendNode(first, 17);
     appendNode(third, 77);
-    traverse(first);
+    traverseRecursive(first);
 
     cout << "Searching for 99: " << searchItem(first, 99) << endl;
     cout << "Searching recursively for 21: " << searchItemRecursively(first, 21) << endl;
     cout << "Searching for 25: " << searchItem(first, 25) << endl;
     cout << "Searching recursively for 99: " << searchItemRecursively(first, 99) << endl;
 
-    traverse(first);
+    traverseRecursive(first);
     cout << "Deleting :: " << first->data << endl;
     deleteNode(first, third->next);
-    traverse(first);
+    traverseRecursive(first);
 
     cout << "Total items(Iterative method) ::" << countItemIterative(first) << endl;
     cout << "Total items(Recursive method) ::" << countItemRecursively(first) << endl;
+
+    printMiddle(first);
     return 0;
 }

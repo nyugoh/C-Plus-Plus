@@ -32,6 +32,18 @@ bool isStringUnique(string word) {
     return isUnique;
 }
 
+bool isUnique(string word)
+{
+    if(word.length() > 128) return false;
+
+    bool char_set[128] = {false};
+    for(char c : word){
+        if(char_set[c-'a'])
+            return false;
+        char_set[s-'a'] = true;
+    }
+    return true;
+}
 
 int main(int argvc, char *argv[]) {
     string name;

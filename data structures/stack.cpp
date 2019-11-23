@@ -64,7 +64,7 @@ void print()
         if(i < top)
             cout  << ", ";
     }
-    cout << endl;
+    cout << "]" << endl;
 }
 
 int main(int argvc, char *argv[])

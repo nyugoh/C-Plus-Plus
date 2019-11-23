@@ -88,6 +88,7 @@ void deleteLinkedList() {
     head = NULL;
 }
 
+
 void insertNode(int data, int position) {
     Node *newNode = new Node(data);
     Node *tempNode = head;
@@ -102,7 +103,7 @@ void insertNode(int data, int position) {
     do {
         i++;
         tempNode = tempNode->next;
-    } while (tempNode != head && i < position);
+    } while (tempNode->next!= head && i < position);
 
     if (tempNode->next == head) {
         // Inserting at the end

@@ -4,7 +4,8 @@
 */
 
 #include <iostream>
-#include "LinkedList.h"
+#include <unordered_set>
+#include "LinkedList.cpp"
 
 using namespace std;
 
@@ -14,16 +15,38 @@ using namespace std;
  *  How would you solve this problem if a temporary buffer is not allowed?
  * */
 
+/*
+ * Use a hash map to keep track of unque ones, remove any duplicates
+ * */
 
 int main(int argvc, char *argv[])
 {
     LinkedList linkedList;
-    linkedList.print();
     linkedList.appendNodeToEnd(20);
-    linkedList.deleteNodeByValue(20);
     linkedList.appendNodeToEnd(21);
     linkedList.appendNodeToEnd(22);
+    linkedList.appendNodeToEnd(22);
+    linkedList.appendNodeToEnd(21);
     linkedList.appendNodeToEnd(23);
+    linkedList.appendNodeToEnd(25);
+    linkedList.appendNodeToEnd(23);
+    linkedList.print();
+
+    Node *tempNode = linkedList.head;
+    Node *prevNode = NULL;
+    unordered_set<int> set;
+    while(tempNode){
+        if(set.find(tempNode->data) == set.end()){
+            set.insert(tempNode->data);
+            prevNode = tempNode;
+            tempNode = tempNode->next;
+        } else {
+            prevNode->next = tempNode->next;
+            delete tempNode;
+            tempNode = prevNode->next;
+        }
+    }
+
     linkedList.print();
     return 0;
 }

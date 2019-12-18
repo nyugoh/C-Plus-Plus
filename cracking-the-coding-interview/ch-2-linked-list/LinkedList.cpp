@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "LinkedList.h"
+#include "Node.cpp"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ void LinkedList::deleteNodeByValue(int value) {
         prevNode = currentNode;
         currentNode = currentNode->next;
     }
-    if()
+
 }
 
 void LinkedList::print() {

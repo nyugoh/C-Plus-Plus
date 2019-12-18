@@ -3,6 +3,8 @@
 * Copyright (c) 2019 Que Base Tech. All rights reserved.
 */
 #include <iostream>
+#include "Node.cpp"
+
 using namespace std;
 
 /*
@@ -17,18 +19,6 @@ using namespace std;
  *          - pre-order
  *          - post-order
  * */
-
-class Node
-{
-public:
-    Node(int d): data(d) {
-        leftChild = NULL;
-        rightChild = NULL;
-    }
-    int data;
-    Node *leftChild;
-    Node *rightChild;
-};
 
 Node *root = NULL;
 

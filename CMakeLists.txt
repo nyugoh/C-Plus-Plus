@@ -4,4 +4,4 @@ project(C-Plus-Plus)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 
-add_executable(C-Plus-Plus "data structures/binary-trees/tree_height.cpp")
+add_executable(C-Plus-Plus cracking-the-coding-interview/ch-3-queues-and-stacks/q1-three-in-one.cpp)

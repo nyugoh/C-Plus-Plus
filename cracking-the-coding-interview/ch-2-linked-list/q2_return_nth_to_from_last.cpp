@@ -25,19 +25,18 @@ using namespace std;
 
 /*
  * Using two pointers
- * - p1 & p2, one moving k steps, when it gets to end, the other will be k steps away
+ * - p1 & p2, one moving k steps, then move the two one step at a time.
+ * - when it gets to end, the other will be k steps away from the end.
+ *
  * */
 Node* nthToLastIteratively(LinkedList list, int k) {
     Node *fastPrt = list.head;
     Node *slowPrt = list.head;
 
-    /*
-     * Move fstPrt k steps */
-    for (int i = 1; i <=k; i++)
-        fastPrt = fastPrt->next;
+    /* Move fstPrt k steps */
+    for (int i = 1; i <=k; i++) fastPrt = fastPrt->next;
 
-    /*
-     * Move them equally */
+    /* Move them equally */
     while (fastPrt) {
         fastPrt = fastPrt->next;
         slowPrt = slowPrt->next;

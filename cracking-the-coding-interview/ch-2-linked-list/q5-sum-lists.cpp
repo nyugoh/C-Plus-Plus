@@ -25,39 +25,62 @@ using namespace std;
 
 /* SOLUTION
  * - Push them each in a stack, get the length
- * - Pop each item and mupliply with 10^index, add them up for each stack
+ * - Pop each item and multiply with 10^index, add them up for each stack
  * - Sum the product of both
  * */
 
 forward_list<int> sumListForward(forward_list<int>, forward_list<int>);
 forward_list<int> sumListBackward(forward_list<int>, forward_list<int>);
 
+forward_list<int> sum(forward_list<int>, forward_list<int>);
+
 int main(int argvc, char *argv[])
 {
     forward_list<int> l1{6,1,7};
     forward_list<int> l2{2,9,5};
-    sumListBackward(l1, l2);
-
-    l1 = {7,1, 6};
-    l2 = {5,9,2};
-    sumListForward(l1, l2);
+    forward_list<int> l3{7,1,6};
+    forward_list<int> l4{5,9,2};
+//    sumListForward(l1, l2);
+//    sumListBackward(l3, l4);
+    forward_list<int> result = sum(l1, l2);
+    for(int &i: result)
+        cout << i << "->";
     return 0;
+}
+
+forward_list<int> sum(forward_list<int>l1, forward_list<int> l2) {
+    forward_list<int> result;
+    int i, total = 0, remainder = 0;
+    l1.reverse();
+    l2.reverse();
+    for(i=0;i<3;i++) {
+        total = l1.front() + l2.front() + remainder;
+        result.push_front(total%10);
+        remainder = total/10;
+        cout << l1.front() << " + " << l2.front() << " = " << total << endl;
+        l1.pop_front();
+        l2.pop_front();
+    }
+    return result;
 }
 
 forward_list<int> sumListForward(forward_list<int> l1, forward_list<int> l2) {
     forward_list<int> sum;
     stack<int> s1, s2;
-    int l1Value=0, l2Value=0, s1Length = 0, s2Length = 0;
+    int l1Value = 0, l2Value = 0, s1Length = 0, s2Length = 0;
+    cout << "[";
     for(int &i: l1){
-        cout << i << " ->";
+        cout << i << "->";
         s1.push(i);
         s1Length += 1;
     }
+    cout << "] + [";
     for(int &j:l2){
-        cout << j << " ->";
+        cout << j << "->";
         s2.push(j);
         s2Length += 1;
     }
+    cout << "] = ";
 
     for(int i=0;i< s1Length;i++){
         l1Value += s1.top()*pow(10, i);
@@ -74,19 +97,21 @@ forward_list<int> sumListForward(forward_list<int> l1, forward_list<int> l2) {
 
 forward_list<int> sumListBackward(forward_list<int> l1, forward_list<int> l2) {
     forward_list<int> sum;
-    queue<int>q1, q2;
-    int l1Value=0, l2Value=0,q1Length = 0, q2Length = 0;
+    queue<int> q1, q2;
+    int l1Value = 0, l2Value = 0,q1Length = 0, q2Length = 0;
     for(int &i: l1){
-        cout << i << " ->";q1.push(i);q1Length += 1;
+        cout << i << "->";
+        q1.push(i);
+        q1Length += 1;
     }
     for(int &j:l2){
-        cout << j << " ->";
+        cout << j << "->";
         q2.push(j);
         q2Length += 1;
     }
-
     for(int i=q1Length;i>0;i++){
-        l1Value +=q1.front()*pow(10, i);q1.pop();
+        l1Value +=q1.front()*pow(10, i);
+        q1.pop();
     }
     for(int i=q2Length;i>0;i++){
         l2Value += q2.front()*pow(10, i);

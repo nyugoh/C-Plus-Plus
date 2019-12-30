@@ -19,20 +19,8 @@ using namespace std;
  * Use a hash map to keep track of unque ones, remove any duplicates
  * */
 
-int main(int argvc, char *argv[])
-{
-    LinkedList linkedList;
-    linkedList.appendNodeToEnd(20);
-    linkedList.appendNodeToEnd(21);
-    linkedList.appendNodeToEnd(22);
-    linkedList.appendNodeToEnd(22);
-    linkedList.appendNodeToEnd(21);
-    linkedList.appendNodeToEnd(23);
-    linkedList.appendNodeToEnd(25);
-    linkedList.appendNodeToEnd(23);
-    linkedList.print();
-
-    Node *tempNode = linkedList.head;
+void removeDuplicateM1(Node* head) {
+    Node *tempNode = head;
     Node *prevNode = NULL;
     unordered_set<int> set;
     while(tempNode){
@@ -46,6 +34,48 @@ int main(int argvc, char *argv[])
             tempNode = prevNode->next;
         }
     }
+}
+
+/*
+ * O(1) Space complexity
+ * O(N*N) Time complexity
+ * */
+void removeDuplicateM2(Node *head) {
+    Node *prev = NULL, *current, *next = head->next;
+    current = head;
+    while(current) {
+        prev = current;
+        next = current->next;
+        while(next) {
+            if(current->data != next->data) {
+                prev = next;
+                next = next->next;
+            } else {
+                prev->next = next->next;
+                delete next;
+                next = prev->next;
+            }
+        }
+        current = current->next;
+    }
+}
+
+int main(int argvc, char *argv[])
+{
+    LinkedList linkedList;
+    linkedList.appendNodeToEnd(20);
+    linkedList.appendNodeToEnd(21);
+    linkedList.appendNodeToEnd(22);
+    linkedList.appendNodeToEnd(22);
+    linkedList.appendNodeToEnd(21);
+    linkedList.appendNodeToEnd(23);
+    linkedList.appendNodeToEnd(25);
+    linkedList.appendNodeToEnd(22);
+    linkedList.appendNodeToEnd(23);
+    linkedList.appendNodeToEnd(20);
+    linkedList.print();
+
+    removeDuplicateM2(linkedList.head);
 
     linkedList.print();
     return 0;

@@ -6,6 +6,7 @@
 #include "include/Tree.h"
 #include <iostream>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -52,6 +53,11 @@ void BinaryTree::inOrderTraversal(Node *node) {
     inOrderTraversal(node->rightChild);
 }
 
+void BinaryTree::inOrderTraversalIterative() {
+
+}
+
+
 /*
  * Current -> Left -> Right
  * */
@@ -62,6 +68,11 @@ void BinaryTree::preOrderTraversal(Node *node) {
     preOrderTraversal(node->rightChild);
 }
 
+void BinaryTree::preOrderTraversalIterative() {
+
+}
+
+
 /*
  * Left -> Right -> Current
  * */
@@ -70,4 +81,22 @@ void BinaryTree::postOrderTraversal(Node *node) {
     postOrderTraversal(node->leftChild);
     postOrderTraversal(node->rightChild);
     cout << node->data << " ";
+}
+
+/* Use stack */
+void BinaryTree::postOrderTraversalIterative() {
+    stack<Node*> stack;
+    Node* tempNode = root;
+    stack.push(tempNode);
+    while(!stack.empty()) {
+        Node* top = stack.top();
+        while(top->leftChild) {
+            stack.push(top->leftChild);
+            top = stack.top();
+        }
+        cout << top->data << " ";
+        while(top->rightChild) {
+
+        }
+    }
 }

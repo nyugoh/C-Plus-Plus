@@ -21,8 +21,11 @@ public:
 
     void insertLevelOrder(int);
     void inOrderTraversal(Node*);
+    void inOrderTraversalIterative();
     void preOrderTraversal(Node*);
+    void preOrderTraversalIterative();
     void postOrderTraversal(Node*);
+    void postOrderTraversalIterative();
 };
 
 

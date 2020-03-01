@@ -12,13 +12,14 @@ int count = 0;
 int list[MAX_SIZE] = {};
 
 void binaryString(int n) {
+    count++;
     if (n < 1) {
         cout << n << " ";
     } else {
-        list[n - 1] = 0;
-        binaryString(n - 1);
-        list[n - 1] = 1;
-        binaryString(n - 1);
+        list[n-1] = 0;
+        binaryString(n-1);
+        list[n-1] = 1;
+        binaryString(n-1);
     }
 }
 
@@ -26,6 +27,7 @@ void binaryString(int n) {
 int main(int argvc, char *argv[]) {
     binaryString(MAX_SIZE);
     cout << "Count " << count << endl;
+    for(auto i : list) cout << i << " ";
     return 0;
 }
 

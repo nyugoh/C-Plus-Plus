@@ -19,45 +19,57 @@ using namespace std;
  * - loop the two arrays, compare the first elements and add the least in the array
  * -
  * */
-void merge(vector<int> arry, int low, int mid, int high) {
-    vector<int> sorted;
-    auto l = arry.begin();
-    auto h = l+mid+1;
-    vector<int> first(arry.begin(), arry.at(l+mid));
-    vector<int> second(arry.at(l+mid+1), arry.end());
-    auto f_it = first.begin();
-    auto s_it = second.begin();
-    while(!first.empty() && !second.empty()) {
-        if(*f_it < *s_it){
-            sorted.push_back(*f_it);
-            arry.erase(l);
-            first.erase(f_it);
-            l++;
-            f_it++;
-        } else if(arry.at(l) > arry.at(h)){
-            sorted.push_back(arry.at(h));
-            arry.erase(h);
-            h++;
+void mergeArrays(int array[], int tempArray[], int low, int mid, int high) {
+    int right_start = mid+1;
+    int tempPos = low, size = high-low + 1;
+    while((low <=mid) && (right_start <= high)) {
+        if(array[low] <= array[right_start]){
+            tempArray[tempPos] = array[low];
+            tempPos += 1;
+            low += 1;
+        } else {
+            tempArray[tempPos] = array[right_start];
+            tempPos += 1;
+            right_start += 1;
         }
     }
-    while()
-}
+    // Check if one still has elements
+    while(low <= mid) {
+        tempArray[tempPos] = array[low];
+        tempPos += 1;
+        low += 1;
+    }
 
-
-void mergeSort(vector<int> arry, int low, int high) {
-    if(high > low){
-        int mid = low + (high - low)/2;
-        mergeSort(arry, low, mid);
-        mergeSort(arry, mid+1, high);
-        merge(arry, low, mid, high);
+    while(right_start <= high) {
+        tempArray[tempPos] = array[right_start];
+        tempPos += 1;
+        right_start += 1;
+    }
+    for (int i = 0; i <= size; ++i) {
+        array[high] = tempArray[high];
+        high -= 1;
     }
 }
 
-
+void mergeSort(int array[], int tempArray[], int low, int high) {
+    if(low < high) {
+        int mid = (low+high)/2;
+        mergeSort(array, tempArray, low, mid);
+        mergeSort(array, tempArray, mid+1, high);
+        mergeArrays(array, tempArray, low, mid, high);
+    }
+}
 
 int main(int argvc, char *argv[])
 {
-
+    int array[] = {1, 5, 3, 10,7, 11, 12, 9, 2}, tempArray[9];
+    for(auto it :array)
+        cout << it << ", ";
+    cout << endl;
+    mergeSort(array, tempArray, 0, 8);
+    for(auto it :array)
+        cout << it << ", ";
+    cout << endl;
 
     return 0;
 }

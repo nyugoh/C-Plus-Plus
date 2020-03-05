@@ -53,7 +53,7 @@ void mergeArrays(int array[], int tempArray[], int low, int mid, int high) {
 
 void mergeSort(int array[], int tempArray[], int low, int high) {
     if(low < high) {
-        int mid = (low+high)/2;
+        int mid = low + (high-low)/2; // (low+high)/2;
         mergeSort(array, tempArray, low, mid);
         mergeSort(array, tempArray, mid+1, high);
         mergeArrays(array, tempArray, low, mid, high);

@@ -36,8 +36,7 @@ void swap_ints(int* first, int* second)
 {
     cout << "Swapping " << *first << " and " << *second << endl;
     int temp = *first;
-    *first = *first +  *second;
-    *first -= temp;
+    *first = *second;
     *second = temp;
 }
 
